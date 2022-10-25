@@ -14,7 +14,7 @@ const collection = db.collection('crud');
  }) 
 
 app.get('/',(req, res)=>{
-    res.send('index.ejs')
+    res.render('index.ejs')
 })
 app.set('view engine', 'ejs')
 
