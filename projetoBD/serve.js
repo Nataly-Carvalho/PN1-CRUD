@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const ObjectId = require('mongodb-legacy').ObjectId
 const {MongoClient}= require('mongodb-legacy')
-const uri = "mongodb+srv://dbUser:dbUser@cluster0.xnmmqjo.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Userdb:Userdb@cluster0.azcxd2q.mongodb.net/?retryWrites=true&w=majority";
 //email educacional que a conta do mongo  foi criada
 const client = new MongoClient(uri);
 const db = client.db("teste-db");
