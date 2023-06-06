@@ -1,0 +1,32 @@
+{
+  "name": "atividade",
+  "version": "1.0.0",
+  "description": "atividade de luana",
+  "main": "serve.js",
+  "scripts": {
+    "test": "echo\"Error: no test specified\" && exit 1",
+    "start": "node serve.js",
+    "dev": "nodemon serve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nataly-Carvalho/PN1-CRUD.git"
+  },
+  "keywords": [
+    "123"
+  ],
+  "author": "nataly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nataly-Carvalho/PN1-CRUD/issues"
+  },
+  "homepage": "https://github.com/Nataly-Carvalho/PN1-CRUD#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongodb": "^4.11.0",
+    "mongodb-legacy": "^4.0.0",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {}
+}

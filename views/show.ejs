@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<nav class="navbar text-bg-dark">
+    <div class="container-fluid bg-dark">
+        <a class="navbar-brand text-light" href="../inicio.html">
+            Acervo Magico
+        </a>
+        <a class="text-light btn btn-outline-light" href="\inicio.html">Inicio</a>
+    </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner mb-4 mt-0">
+        <div class="carousel-item active">
+            <img src="https://imgur.com/hBoPa8w.gif" width="100%" height="100%" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="https://imgur.com/5UhzhfN.gif" width="100%" height="100%" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.imgur.com/y22qF5g.gif" width="100%" height="100%" alt="">
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<body class="bg-secondary-subtle">
+    <div>
+        <h2 class="text-center">Minha Lista</h2>
+    </div>
+
+    <div class="container justify-content-center">
+        <div class="card-group">
+            <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4">
+                <% crud.forEach(function(details) { %>
+                    <div class="card mb-3 m-3" style="max-width: 540px;">
+                        <div class="row g-col-6">
+
+                            <div class="col-md-4">
+                                <img src="<%= details.img %>" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= details.name %>
+                                    </h5>
+                                    <hr>
+                                    <p class="card-text">
+                                        <%= details.descricao %>
+                                    </p>
+                                    <a class='btn btn-dark' href="/edit/<%= details._id %>">Editar</a>
+                                    <a class='btn btn-dark' href="/delete/<%= details._id %>">Deletar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+
+        </div>
+
+        <div>
+            <a class=" btn btn-outline-dark m-3" href="/index">Adicionar Novo </a>
+        </div>
+    </div>
+
+
+
+    <hr>
+    <footer class="bg-cor ">
+        <div class="row md-3">
+            <div class="col-md-12 d-flex justify-content-center p-0">
+                <a href="https://github.com/Nataly-Carvalho" target="_blank" class="p-3">
+                    <img class="tm-social" width="40px" height="40px" src="https://i.imgur.com/tc26PdV.png"
+                        title="source: imgur.com" />
+                </a>
+                <a href="https://www.linkedin.com/in/nataly-carvalho-silva" target="_blank" class="p-3">
+                    <img class="tm-social" width="40px" height="40px" src="https://i.imgur.com/KHWJ3GB.png"
+                        title="icone do linkedin" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <p class="text-center">
+                    Todos os direitos resevados para Nataly Carvalho &copy;
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<!-- CSS only -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</html>

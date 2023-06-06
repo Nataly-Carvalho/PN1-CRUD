@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My CRUD in NodeJS</title>
+</head>
+<nav class="navbar text-bg-dark">
+    <div class="container-fluid bg-dark">
+        <a class="navbar-brand text-light" href="../inicio.html">
+            Acervo Magico
+        </a>
+        <a class="text-light btn btn-outline-light" href="\inicio.html">Voltar</a>
+    </div>
+</nav>
+<body>
+    <h2>Editar Registro</h2>
+    <%crud.forEach(function(details) {%>
+        <form action="/edit/<%= details._id %>" method="POST">
+            <input type="image" value="<%=details.img %>" name="imagem"
+            <input type="text" value="<%= details.name %>" name="name">
+            <input type="text" value="<%= details.descricao %>" name="descricao">
+            <br>
+            <button> <a href="/show">Todos</a> </button>
+            <button type="submit">Editar</button>
+        </form>
+        <% }) %>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<!-- CSS only -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</html>
